@@ -20,3 +20,6 @@ def classify0(inX, dataSet, labels, k):
         classCount[voteIlabel] = classCount.get(voteIlabel, 0) + 1
     sortedClassCount = sorted(classCount.items(),key=operator.itemgetter(1), reverse=True)
     return sortedClassCount[0][0]
+
+group, labels = createDataSet()
+kNN.classify0([0, 0], group, labels, 3)
